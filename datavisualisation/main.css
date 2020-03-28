@@ -33,7 +33,7 @@ ol {
 .fade {
   opacity: 1 !important;
   margin-top: 0 !important;
-  transition: opacity 1s, margin-top 2s;
+  transition: opacity 1s, margin-top 0.4s;
   transition-timing-function: ease-in-out;
 }
 

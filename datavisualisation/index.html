@@ -20,11 +20,32 @@
         <p>Paragraph 2</p>
         </div>
       </li>
+      <li id="list-item">
+        <h1 class="title">D3 Select Example</h1>
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+        </div>
+      </li>
+      <li id="list-item">
+        <h1 class="title">D3 Select Example</h1>
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+        </div>
+      </li>
     </ol>
   </main>
   <script>
     window.onload = function () {
-      document.getElementById("list-item").classList.add("fade");
+      var ListItem = document.getElementById("list-item");
+      ListItem.classList.add("fade");
+
+      var ListItems = document.querySelectorAll("#list-item");
+      // for (var i = 0; i < ListItems.length; i++) {
+      //   ListItems[i].classList.add("fade");
+      // }
+      ListItems.forEach(listi => {
+        listi.classList.add("fade");
+      })
     }
   </script>
   <script>

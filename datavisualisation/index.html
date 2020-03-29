@@ -35,23 +35,17 @@
     </ol>
   </main>
   <script>
-    var ListItems = document.querySelectorAll("#list-item");
-
-
-
-
     window.onload = function () {
       // var ListItem = document.getElementById("list-item");
       //ListItem.classList.add("fade");
+      let listItems = document.querySelectorAll("#list-item");
+      for (let i = 0; i < listItems.length; i++) {
 
-
-      for (var i = 0; i < ListItems.length; i++) {
-        ListItems[i].classList.add("fade");
-        // console.log(ListItems[1]);
-        var newList = ListItems[1];
-
-        for (var j = 0; j < newList.length; j++) {
-          console.log(newList[i]);
+        listItems[i].classList.add("fade");
+        let subArray = listItems[i];
+        //console.log(subArray);
+        for (let j = 0; j < listItems[i].length; j++) {
+          console.log(listItems[i][j]);
         }
       }
       // ListItems.forEach(listi => {

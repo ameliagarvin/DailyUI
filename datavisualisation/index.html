@@ -40,13 +40,30 @@
       //ListItem.classList.add("fade");
       let listItems = document.querySelectorAll("#list-item");
       for (let i = 0; i < listItems.length; i++) {
+        let subArray = listItems[i].querySelectorAll("*");
 
         listItems[i].classList.add("fade");
-        let subArray = listItems[i];
-        //console.log(subArray);
-        for (let j = 0; j < listItems[i].length; j++) {
-          console.log(listItems[i][j]);
+        if (i === 1) {
+          for (let j = 0; j < subArray.length; j++) {
+            console.log(subArray[j]);
+
+            console.log(subArray[j].tagName);
+            if (subArray[j].tagName === 'P') {
+              subArray[j].style.color = 'green';
+            }
+          }
+
+
         }
+
+
+
+        //console.log(subArray);
+
+        // for (let j = 0; j < subArray.length; j++) {
+        //   console.log(subArray[j]);
+
+        // }
       }
       // ListItems.forEach(listi => {
       //   listi.classList.add("fade");

@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <main>
+  <main id="demo">
     <ol class="list-item-grid">
       <li id="list-item">
         <h1 class="title">D3 Select Example</h1>
@@ -35,21 +35,35 @@
     </ol>
   </main>
   <script>
-    window.onload = function () {
-      var ListItem = document.getElementById("list-item");
-      ListItem.classList.add("fade");
+    var ListItems = document.querySelectorAll("#list-item");
 
-      var ListItems = document.querySelectorAll("#list-item");
-      // for (var i = 0; i < ListItems.length; i++) {
-      //   ListItems[i].classList.add("fade");
-      // }
-      ListItems.forEach(listi => {
-        listi.classList.add("fade");
-      })
+
+
+
+    window.onload = function () {
+      // var ListItem = document.getElementById("list-item");
+      //ListItem.classList.add("fade");
+
+
+      for (var i = 0; i < ListItems.length; i++) {
+        ListItems[i].classList.add("fade");
+        // console.log(ListItems[1]);
+        var newList = ListItems[1];
+
+        for (var j = 0; j < newList.length; j++) {
+          console.log(newList[i]);
+        }
+      }
+      // ListItems.forEach(listi => {
+      //   listi.classList.add("fade");
+      //   if (listi.indexOf[1])) {
+      //     d3.selectAll("p").style("color", "green");
+      //   }
+      // })
     }
   </script>
   <script>
-    d3.select("p").style("color", "green");
+    // d3.select("p").style("color", "green");
   </script>
 </body>
 

@@ -41,4 +41,32 @@ ol {
   color: #ff5252;
   margin-top: 12px;
   margin-bottom: 4px;
+  padding-bottom: 0.5em;
+}
+
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 1rem;
+  border: 1px solid gray;
+}
+
+@media screen and (min-width: 600px) {
+  .card {
+    flex: 1 1 calc(50% - 2rem);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .card {
+    flex: 1 1 calc(33% - 2rem);
+  }
 }

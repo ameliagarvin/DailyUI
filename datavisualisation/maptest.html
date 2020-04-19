@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>D3 World Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+
+
+</head>
+
+<body>
+  <style>
+    #mapid {
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+  <id id="mapid"></id>
+  <div id='map' style='width: 400px; height: 300px;'></div>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYWd3ZWIxMjMiLCJhIjoiY2s5Nmp3NXJvMGw3aTNobDIzbWk3M25jbiJ9.peYgf1T4W3E4O2vwO2UAcQ';
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v11'
+    });
+  </script>
+
+
+</body>
+
+</html>

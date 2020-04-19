@@ -34,6 +34,8 @@
       </li>
     </ol>
   </main>
+  <p></p>
+
   <script>
     window.onload = function () {
       // var ListItem = document.getElementById("list-item");
@@ -74,7 +76,14 @@
     }
   </script>
   <script>
-    // d3.select("p").style("color", "green");
+    d3.json(
+      "https://opendata.vancouver.ca/api/records/1.0/search/?dataset=business-licences&facet=folderyear&facet=licencerevisionnumber&facet=status&facet=issueddate&facet=businesstype&facet=businesssubtype&facet=city&facet=province&facet=localarea",
+      function (error, data) {
+        d3.select("body")
+          .selectAll("p").data(data).enter().append("p").text(function (d) {
+            return d.name + ", " + d.location;
+          });
+      })
   </script>
 </body>
 
